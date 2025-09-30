@@ -1,10 +1,5 @@
 # .NET Desktop
-- task: UiPathDeploy@5
-  inputs:
-    orchestratorConnection: 'AzureDevOps-UiPath'
-    packagesPath: '$(Build.ArtifactStagingDirectory)/ProcessNetworkEnquiry.1.0.$(Build.BuildId).nupkg'
-    folderName: 'Autopilot'
-    processName: 'ProcessNetworkEnquiry'
+
 # Build and run tests for .NET Desktop or Windows classic desktop solutions.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
@@ -22,6 +17,13 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@1
+
+- task: UiPathDeploy@5
+  inputs:
+    orchestratorConnection: 'AzureDevOps-UiPath'
+    packagesPath: '$(Build.ArtifactStagingDirectory)/ProcessNetworkEnquiry.1.0.$(Build.BuildId).nupkg'
+    folderName: 'Autopilot'
+    processName: 'ProcessNetworkEnquiry'
 
 - task: NuGetCommand@2
   inputs:
