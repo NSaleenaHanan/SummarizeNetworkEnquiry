@@ -2,7 +2,7 @@
 - task: UiPathDeploy@5
   inputs:
     orchestratorConnection: 'AzureDevOps-UiPath'
-    packagesPath: 'C:\Users\Hanan.Saleena\.nuget\packages\summarizenetworkenquiry\1.0.3\summarizenetworkenquiry.1.0.3.nupkg'
+    packagesPath: 'C:\Users\Hanan.Saleena\.nuget\packages\processnetworkenquiries\1.0.1\processnetworkenquiries.1.0.1.nupkg'
     folderName: 'DefaultTenant'
     processName: 'ProcessNetworkEnquiry'
 # Build and run tests for .NET Desktop or Windows classic desktop solutions.
