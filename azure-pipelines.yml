@@ -2,8 +2,8 @@
 - task: UiPathDeploy@5
   inputs:
     orchestratorConnection: 'AzureDevOps-UiPath'
-    packagesPath: 'C:\Users\Hanan.Saleena\.nuget\packages\processnetworkenquiries\1.0.1\processnetworkenquiries.1.0.1.nupkg'
-    folderName: 'DefaultTenant'
+    packagesPath: '$(Build.ArtifactStagingDirectory)/ProcessNetworkEnquiry.1.0.$(Build.BuildId).nupkg'
+    folderName: 'Autopilot'
     processName: 'ProcessNetworkEnquiry'
 # Build and run tests for .NET Desktop or Windows classic desktop solutions.
 # Add steps that publish symbols, save build artifacts, and more:
